@@ -1,4 +1,4 @@
-package com.jalon.java;
+package com.jalon.sample;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -19,7 +19,6 @@ public class AppTest
     {
         super( testName );
     }
-
     /**
      * @return the suite of tests being tested
      */
