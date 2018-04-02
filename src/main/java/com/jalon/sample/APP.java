@@ -5,6 +5,6 @@ package com.jalon.sample;
  */
 public class APP {
     public static void main(String[] args) {
-        System.out.println("hello nimei");
+        System.out.println("³ÁÄ¬µÄ¸áÑò");
     }
 }
