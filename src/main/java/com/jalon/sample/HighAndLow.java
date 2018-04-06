@@ -24,7 +24,8 @@ public class HighAndLow {
     public static String HighAndLow2(String numbers) {
         // Code here or
         IntSummaryStatistics is  = Arrays.stream(numbers.split(" ")).mapToInt(Integer::parseInt).summaryStatistics();
-        return is.getMax()+" " + is.getMin();
+        //return is.getMax() + " " + is.getMin();
+        return String.format("%d %d",is.getMax(), is.getMin()) ;
     }
 
     //3 StringArrays to intArrays

@@ -5,6 +5,8 @@ package com.jalon.sample;
  */
 public class APP {
     public static void main(String[] args) {
-        System.out.println("³ÁÄ¬µÄ¸áÑò");
+        System.out.println("å›½å®¶");
+        String hel = "HLEOO";
+        hel.toUpperCase();
     }
 }
