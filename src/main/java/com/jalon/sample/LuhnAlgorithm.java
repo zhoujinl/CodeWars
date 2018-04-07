@@ -38,6 +38,9 @@ import java.util.Arrays;
  18 (modulus) 10 ==> 8 , which is not equal to 0, so this is not a valid credit card number
  */
 public class LuhnAlgorithm {
+
+    //string 字符串字母顺序倒序  String sni = new StringBuffer(n).reverse().toString();
+
     public static boolean validate(String n){
         String sni = new StringBuffer(n).reverse().toString();
         String[] ss = sni.split("");
