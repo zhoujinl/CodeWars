@@ -31,6 +31,9 @@ public class APP {
         flag ^= true;
         System.out.println(flag);
 
+        Runnable r =  () -> { System.out.println("hello world");System.out.println("hello world");System.out.println("hello world");};
+
+
     }
 
     public static boolean validate3(String n) {
