@@ -1,4 +1,4 @@
-package com.jalon;
+package com.jalon.newfeatures;
 
 import java.util.function.Function;
 
