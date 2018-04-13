@@ -1,6 +1,8 @@
 package com.jalon.sort;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -12,10 +14,12 @@ public class SortSample {
     public static void main(String[] args) {
         int[] it = {355,34,288,56,7,45,723,44,2};
         //bubbleSort(it);
-        //simpleInsertSort(it);
+        simpleInsertSort(it);
         //shellSort(it);
-        selectSort(it);
+        //selectSort(it);
         IntStream.of(it).forEach(i -> System.out.printf("%d ",i));
+
+
     }
 
     /*
