@@ -13,7 +13,7 @@ public class FunctionSample {
 
         int incr = 20;  int myNumber = 10;
         modifyTheValue(myNumber, val-> val + incr );
-        //  ==> µÈ¼ÛÓÚ
+        //  ==> ç­‰ä»·äº
         modifyTheValue(myNumber, new Function<Integer, Integer>() {
                     @Override
                     public Integer apply(Integer integer) {
@@ -30,7 +30,7 @@ public class FunctionSample {
 
     static void modifyTheValue(int valueToBeOperated, Function<Integer, Integer> function){
 
-        // function ½Ó¿ÚµÄÊµÏÖ£¬½«¶ÔvalueToBeOperated ½øĞĞ²Ù×÷
+        // function æ¥å£çš„å®ç°ï¼Œå°†å¯¹valueToBeOperated è¿›è¡Œæ“ä½œ
         int newValue = function.apply(valueToBeOperated);
 
         /*
