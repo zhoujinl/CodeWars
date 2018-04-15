@@ -32,7 +32,7 @@ public class APP {
         System.out.println(flag);
 
         Runnable r =  () -> { System.out.println("hello world");System.out.println("hello world");System.out.println("hello world");};
-
+        String[] l = {"a","b","c"};
 
     }
 
