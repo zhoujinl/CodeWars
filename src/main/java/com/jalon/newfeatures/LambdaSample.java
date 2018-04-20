@@ -8,9 +8,9 @@ import java.util.function.Predicate;
 
 /**
  * Created by Jalon on 08/04/2018.
- * Lambda ±í´ïÊ½³£ÓÃ¾ÙÀý  @ http://blog.oneapm.com/apm-tech/226.html
- * Lambda µÈ¼ÛÓÚ   (params)  -> {expr; .. }
- * Lambda ÊµÏÖ FunctionInterface Ö»ÓÐÒ»¸ö³éÏó·½·¨µÄ½Ó¿Ú£¬¸ÃLambda ÊµÏÖ½Ó¿Ú·½·¨
+ * Lambda è¡¨è¾¾å¼å¸¸ç”¨ä¸¾ä¾‹  @ http://blog.oneapm.com/apm-tech/226.html
+ * Lambda ç­‰ä»·äºŽ   (params)  -> {expr; .. }
+ * Lambda å®žçŽ° FunctionInterface åªæœ‰ä¸€ä¸ªæŠ½è±¡æ–¹æ³•çš„æŽ¥å£ï¼Œè¯¥Lambda å®žçŽ°æŽ¥å£æ–¹æ³•
  */
 public class LambdaSample {
 
@@ -89,7 +89,7 @@ public class LambdaSample {
     }
 
     public static void thread() {
-        //¾É·½·¨:
+        //æ—§æ–¹æ³•:
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -97,7 +97,7 @@ public class LambdaSample {
             }
         }).start();
 
-        //ÐÂ·½·¨:
+        //æ–°æ–¹æ³•:
         new Thread(
                 () -> System.out.println("Hello from thread")
         ).start();

@@ -8,26 +8,26 @@ import java.util.stream.Stream;
 /**
  * Created by Jalon on 08/04/2018.
  */
-/**  ÌØĞÔ
- * Á÷µÄ²Ù×÷ÀàĞÍ·ÖÎªÁ½ÖÖ£º @ https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/
- Intermediate£ºÒ»¸öÁ÷¿ÉÒÔºóÃæ¸úËæÁã¸ö»ò¶à¸ö intermediate ²Ù×÷¡£ÆäÄ¿µÄÖ÷ÒªÊÇ´ò¿ªÁ÷£¬×ö³öÄ³ÖÖ³Ì¶ÈµÄÊı¾İÓ³Éä/¹ıÂË£¬È»ºó·µ»ØÒ»¸öĞÂµÄÁ÷£¬½»¸øÏÂÒ»¸ö²Ù×÷Ê¹ÓÃ¡£ÕâÀà²Ù×÷¶¼ÊÇ¶èĞÔ»¯µÄ£¨lazy£©£¬¾ÍÊÇËµ£¬½ö½öµ÷ÓÃµ½ÕâÀà·½·¨£¬²¢Ã»ÓĞÕæÕı¿ªÊ¼Á÷µÄ±éÀú¡£
- Terminal£ºÒ»¸öÁ÷Ö»ÄÜÓĞÒ»¸ö terminal ²Ù×÷£¬µ±Õâ¸ö²Ù×÷Ö´ĞĞºó£¬Á÷¾Í±»Ê¹ÓÃ¡°¹â¡±ÁË£¬ÎŞ·¨ÔÙ±»²Ù×÷¡£ËùÒÔÕâ±Ø¶¨ÊÇÁ÷µÄ×îºóÒ»¸ö²Ù×÷¡£Terminal ²Ù×÷µÄÖ´ĞĞ£¬²Å»áÕæÕı¿ªÊ¼Á÷µÄ±éÀú£¬²¢ÇÒ»áÉú³ÉÒ»¸ö½á¹û£¬»òÕßÒ»¸ö side effect¡£
+/**  ç‰¹æ€§
+ * æµçš„æ“ä½œç±»å‹åˆ†ä¸ºä¸¤ç§ï¼š @ https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/
+ Intermediateï¼šä¸€ä¸ªæµå¯ä»¥åé¢è·Ÿéšé›¶ä¸ªæˆ–å¤šä¸ª intermediate æ“ä½œã€‚å…¶ç›®çš„ä¸»è¦æ˜¯æ‰“å¼€æµï¼Œåšå‡ºæŸç§ç¨‹åº¦çš„æ•°æ®æ˜ å°„/è¿‡æ»¤ï¼Œç„¶åè¿”å›ä¸€ä¸ªæ–°çš„æµï¼Œäº¤ç»™ä¸‹ä¸€ä¸ªæ“ä½œä½¿ç”¨ã€‚è¿™ç±»æ“ä½œéƒ½æ˜¯æƒ°æ€§åŒ–çš„ï¼ˆlazyï¼‰ï¼Œå°±æ˜¯è¯´ï¼Œä»…ä»…è°ƒç”¨åˆ°è¿™ç±»æ–¹æ³•ï¼Œå¹¶æ²¡æœ‰çœŸæ­£å¼€å§‹æµçš„éå†ã€‚
+ Terminalï¼šä¸€ä¸ªæµåªèƒ½æœ‰ä¸€ä¸ª terminal æ“ä½œï¼Œå½“è¿™ä¸ªæ“ä½œæ‰§è¡Œåï¼Œæµå°±è¢«ä½¿ç”¨â€œå…‰â€äº†ï¼Œæ— æ³•å†è¢«æ“ä½œã€‚æ‰€ä»¥è¿™å¿…å®šæ˜¯æµçš„æœ€åä¸€ä¸ªæ“ä½œã€‚Terminal æ“ä½œçš„æ‰§è¡Œï¼Œæ‰ä¼šçœŸæ­£å¼€å§‹æµçš„éå†ï¼Œå¹¶ä¸”ä¼šç”Ÿæˆä¸€ä¸ªç»“æœï¼Œæˆ–è€…ä¸€ä¸ª side effectã€‚
 
- ×ÜÖ®£¬Stream µÄÌØĞÔ¿ÉÒÔ¹éÄÉÎª£º
- ²»ÊÇÊı¾İ½á¹¹
- ËüÃ»ÓĞÄÚ²¿´æ´¢£¬ËüÖ»ÊÇÓÃ²Ù×÷¹ÜµÀ´Ó source£¨Êı¾İ½á¹¹¡¢Êı×é¡¢generator function¡¢IO channel£©×¥È¡Êı¾İ¡£
- ËüÒ²¾ø²»ĞŞ¸Ä×Ô¼ºËù·â×°µÄµ×²ãÊı¾İ½á¹¹µÄÊı¾İ¡£ÀıÈç Stream µÄ filter ²Ù×÷»á²úÉúÒ»¸ö²»°üº¬±»¹ıÂËÔªËØµÄĞÂ Stream£¬¶ø²»ÊÇ´Ó source É¾³ıÄÇĞ©ÔªËØ¡£
- ËùÓĞ Stream µÄ²Ù×÷±ØĞëÒÔ lambda ±í´ïÊ½Îª²ÎÊı
- ²»Ö§³ÖË÷Òı·ÃÎÊ
- Äã¿ÉÒÔÇëÇóµÚÒ»¸öÔªËØ£¬µ«ÎŞ·¨ÇëÇóµÚ¶ş¸ö£¬µÚÈı¸ö£¬»ò×îºóÒ»¸ö¡£²»¹ıÇë²ÎÔÄÏÂÒ»Ïî¡£
- ºÜÈİÒ×Éú³ÉÊı×é»òÕß List
- ¶èĞÔ»¯
- ºÜ¶à Stream ²Ù×÷ÊÇÏòºóÑÓ³ÙµÄ£¬Ò»Ö±µ½ËüÅªÇå³şÁË×îºóĞèÒª¶àÉÙÊı¾İ²Å»á¿ªÊ¼¡£
- Intermediate ²Ù×÷ÓÀÔ¶ÊÇ¶èĞÔ»¯µÄ¡£
- ²¢ĞĞÄÜÁ¦
- µ±Ò»¸ö Stream ÊÇ²¢ĞĞ»¯µÄ£¬¾Í²»ĞèÒªÔÙĞ´¶àÏß³Ì´úÂë£¬ËùÓĞ¶ÔËüµÄ²Ù×÷»á×Ô¶¯²¢ĞĞ½øĞĞµÄ¡£
- ¿ÉÒÔÊÇÎŞÏŞµÄ
- ¼¯ºÏÓĞ¹Ì¶¨´óĞ¡£¬Stream Ôò²»±Ø¡£limit(n) ºÍ findFirst() ÕâÀàµÄ short-circuiting ²Ù×÷¿ÉÒÔ¶ÔÎŞÏŞµÄ Stream ½øĞĞÔËËã²¢ºÜ¿ìÍê³É¡£
+ æ€»ä¹‹ï¼ŒStream çš„ç‰¹æ€§å¯ä»¥å½’çº³ä¸ºï¼š
+ ä¸æ˜¯æ•°æ®ç»“æ„
+ å®ƒæ²¡æœ‰å†…éƒ¨å­˜å‚¨ï¼Œå®ƒåªæ˜¯ç”¨æ“ä½œç®¡é“ä» sourceï¼ˆæ•°æ®ç»“æ„ã€æ•°ç»„ã€generator functionã€IO channelï¼‰æŠ“å–æ•°æ®ã€‚
+ å®ƒä¹Ÿç»ä¸ä¿®æ”¹è‡ªå·±æ‰€å°è£…çš„åº•å±‚æ•°æ®ç»“æ„çš„æ•°æ®ã€‚ä¾‹å¦‚ Stream çš„ filter æ“ä½œä¼šäº§ç”Ÿä¸€ä¸ªä¸åŒ…å«è¢«è¿‡æ»¤å…ƒç´ çš„æ–° Streamï¼Œè€Œä¸æ˜¯ä» source åˆ é™¤é‚£äº›å…ƒç´ ã€‚
+ æ‰€æœ‰ Stream çš„æ“ä½œå¿…é¡»ä»¥ lambda è¡¨è¾¾å¼ä¸ºå‚æ•°
+ ä¸æ”¯æŒç´¢å¼•è®¿é—®
+ ä½ å¯ä»¥è¯·æ±‚ç¬¬ä¸€ä¸ªå…ƒç´ ï¼Œä½†æ— æ³•è¯·æ±‚ç¬¬äºŒä¸ªï¼Œç¬¬ä¸‰ä¸ªï¼Œæˆ–æœ€åä¸€ä¸ªã€‚ä¸è¿‡è¯·å‚é˜…ä¸‹ä¸€é¡¹ã€‚
+ å¾ˆå®¹æ˜“ç”Ÿæˆæ•°ç»„æˆ–è€… List
+ æƒ°æ€§åŒ–
+ å¾ˆå¤š Stream æ“ä½œæ˜¯å‘åå»¶è¿Ÿçš„ï¼Œä¸€ç›´åˆ°å®ƒå¼„æ¸…æ¥šäº†æœ€åéœ€è¦å¤šå°‘æ•°æ®æ‰ä¼šå¼€å§‹ã€‚
+ Intermediate æ“ä½œæ°¸è¿œæ˜¯æƒ°æ€§åŒ–çš„ã€‚
+ å¹¶è¡Œèƒ½åŠ›
+ å½“ä¸€ä¸ª Stream æ˜¯å¹¶è¡ŒåŒ–çš„ï¼Œå°±ä¸éœ€è¦å†å†™å¤šçº¿ç¨‹ä»£ç ï¼Œæ‰€æœ‰å¯¹å®ƒçš„æ“ä½œä¼šè‡ªåŠ¨å¹¶è¡Œè¿›è¡Œçš„ã€‚
+ å¯ä»¥æ˜¯æ— é™çš„
+ é›†åˆæœ‰å›ºå®šå¤§å°ï¼ŒStream åˆ™ä¸å¿…ã€‚limit(n) å’Œ findFirst() è¿™ç±»çš„ short-circuiting æ“ä½œå¯ä»¥å¯¹æ— é™çš„ Stream è¿›è¡Œè¿ç®—å¹¶å¾ˆå¿«å®Œæˆã€‚
  */
 public class StreamSample {
     public static void main(String[] args) {
@@ -39,20 +39,20 @@ public class StreamSample {
     }
 
     /**
-     * Á÷µÄ²Ù×÷
-     ½ÓÏÂÀ´£¬µ±°ÑÒ»¸öÊı¾İ½á¹¹°ü×°³É Stream ºó£¬¾ÍÒª¿ªÊ¼¶ÔÀïÃæµÄÔªËØ½øĞĞ¸÷Àà²Ù×÷ÁË¡£³£¼ûµÄ²Ù×÷¿ÉÒÔ¹éÀàÈçÏÂ¡£
-     Intermediate£º
-     map (mapToInt, flatMap µÈ)¡¢ filter¡¢ distinct¡¢ sorted¡¢ peek¡¢ limit¡¢ skip¡¢ parallel¡¢ sequential¡¢ unordered
-     Terminal£º
-     forEach¡¢ forEachOrdered¡¢ toArray¡¢ reduce¡¢ collect¡¢ min¡¢ max¡¢ count¡¢ anyMatch¡¢ allMatch¡¢ noneMatch¡¢ findFirst¡¢ findAny¡¢ iterator
-     Short-circuiting£º
-     anyMatch¡¢ allMatch¡¢ noneMatch¡¢ findFirst¡¢ findAny¡¢ limit
+     * æµçš„æ“ä½œ
+     æ¥ä¸‹æ¥ï¼Œå½“æŠŠä¸€ä¸ªæ•°æ®ç»“æ„åŒ…è£…æˆ Stream åï¼Œå°±è¦å¼€å§‹å¯¹é‡Œé¢çš„å…ƒç´ è¿›è¡Œå„ç±»æ“ä½œäº†ã€‚å¸¸è§çš„æ“ä½œå¯ä»¥å½’ç±»å¦‚ä¸‹ã€‚
+     Intermediateï¼š
+     map (mapToInt, flatMap ç­‰)ã€ filterã€ distinctã€ sortedã€ peekã€ limitã€ skipã€ parallelã€ sequentialã€ unordered
+     Terminalï¼š
+     forEachã€ forEachOrderedã€ toArrayã€ reduceã€ collectã€ minã€ maxã€ countã€ anyMatchã€ allMatchã€ noneMatchã€ findFirstã€ findAnyã€ iterator
+     Short-circuitingï¼š
+     anyMatchã€ allMatchã€ noneMatchã€ findFirstã€ findAnyã€ limit
      */
 
 
-    //  Stream.collect·½·¨Ïê  http://www.uucode.net/201406/java8-stream-collect
+    //  Stream.collectæ–¹æ³•è¯¦  http://www.uucode.net/201406/java8-stream-collect
     public static void joinString() {
-        // ×Ö·û´®Æ´½Ó
+        // å­—ç¬¦ä¸²æ‹¼æ¥
         System.out.println(Stream.of("a", "b", "c", "d").collect(Collectors.toList()));
     }
 
@@ -71,7 +71,7 @@ public class StreamSample {
     }
 
     public static void originStream() {
-        // TODO IntStream¡¢LongStream¡¢DoubleStream
+        // TODO IntStreamã€LongStreamã€DoubleStream
         IntStream.of(new int[]{1, 2, 3}).forEach(System.out::println);
         IntStream.range(1, 3).forEach(System.out::println);
         IntStream.rangeClosed(1, 3).forEach(System.out::println);

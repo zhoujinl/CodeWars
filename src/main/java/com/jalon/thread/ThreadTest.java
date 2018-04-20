@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * Created by Jalon on 10/04/2018.
- * sleep()Ë¯ÃßÊ±£¬ÊÍ·ÅCPU×ÊÔ´£¬±£³Ö¶ÔÏóËø£¬ÈÔÈ»Õ¼ÓĞ¸ÃËø£»
- * wait()Ë¯ÃßÊ±£¬ÊÍ·Å¶ÔÏóËø¡£
+ * sleep()ç¡çœ æ—¶ï¼Œé‡Šæ”¾CPUèµ„æºï¼Œä¿æŒå¯¹è±¡é”ï¼Œä»ç„¶å æœ‰è¯¥é”ï¼›
+ * wait()ç¡çœ æ—¶ï¼Œé‡Šæ”¾å¯¹è±¡é”ã€‚
  */
 public class ThreadTest implements Runnable {
     int number = 10;
@@ -22,9 +22,9 @@ public class ThreadTest implements Runnable {
     public void secondMethod() throws Exception {
         synchronized (this) {
             /**
-             * (ĞİÏ¢2S,×èÈûÏß³Ì)
-             * ÒÔÑéÖ¤µ±Ç°Ïß³Ì¶ÔÏóµÄ»úËø±»Õ¼ÓÃÊ±,
-             * ÊÇ·ñ±»¿ÉÒÔ·ÃÎÊÆäËûÍ¬²½´úÂë¿é
+             * (ä¼‘æ¯2S,é˜»å¡çº¿ç¨‹)
+             * ä»¥éªŒè¯å½“å‰çº¿ç¨‹å¯¹è±¡çš„æœºé”è¢«å ç”¨æ—¶,
+             * æ˜¯å¦è¢«å¯ä»¥è®¿é—®å…¶ä»–åŒæ­¥ä»£ç å—
              */
             System.out.println("secondMethod: in");
 
@@ -45,7 +45,7 @@ public class ThreadTest implements Runnable {
             }
     }
 
-    //main·½·¨ÖĞÖ÷½ø³Ì»áÖ´ĞĞ
+    //mainæ–¹æ³•ä¸­ä¸»è¿›ç¨‹ä¼šæ‰§è¡Œ
     public static void main(String[] args) throws Exception {
         ThreadTest threadTest = new ThreadTest();
         Thread thread = new Thread(threadTest);
