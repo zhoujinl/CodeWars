@@ -25,16 +25,6 @@ public class CharacterSelection {
         int rowLength = fighters[0].length;
         List<String> result = new ArrayList<String>();
         int[] currPost = position;
-//        for (String move : moves ){
-//            currPost = doMove(move,currPost,rowLength);
-//            result.add(getValue(fighters,currPost));
-//        }
-//        String[] rs  = new String[result.size()];
-//        rs = result.toArray(rs);
-//        System.out.println(Arrays.toString(rs));
-//        System.out.println(result);
-//        return result.toArray(new String[result.size()] );
-
         int i = 0;
         String[] rs  = new String[moves.length];
         for(String move : moves){
@@ -61,14 +51,6 @@ public class CharacterSelection {
         return  post;
     }
     public  static String getValue(String[][] fighters, int[] position){
-//          for (int i=0 ; i < fighters.length;i++){
-//                for(int j=0;j<fighters[i].length;j++){
-//                    if(i == position[0] && j==position[1]){
-//                        return fighters[i][j];
-//                    }
-//                }
-//          }
-//          return fighters[0][0];
         int row = position[0];
         int col = position[1];
         return fighters[row][col];

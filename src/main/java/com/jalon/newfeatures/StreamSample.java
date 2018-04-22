@@ -33,7 +33,7 @@ public class StreamSample {
     public static void main(String[] args) {
         create();
         originStream();
-        //toOther();
+        toOther();
         joinString();
 
     }
