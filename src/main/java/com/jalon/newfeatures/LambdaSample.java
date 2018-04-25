@@ -20,15 +20,13 @@ public class LambdaSample {
         map();
         mapreduce();
 
-
         Consumer<Integer> c = (Integer x) -> { System.out.println(x); };  //void
 
         BiConsumer<Integer, String> b = (Integer x, String y) -> System.out.println(x + " : " + y); //void
 
         Predicate<String> p = (String s) -> { return  s == null; };  // boolean
 
-        //sort1();
-
+        sort1();
         sort2();
 
     }
